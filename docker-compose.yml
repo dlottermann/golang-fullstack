@@ -10,7 +10,7 @@ services:
       - ./database/database.sql:/docker-entrypoint-initdb.d/database.sql
     environment:
       MYSQL_ROOT_PASSWORD: r00t
-      MYSQL_DATABASE: teste
+      MYSQL_DATABASE: fullstack
       MYSQL_HOST: 127.0.0.1
   phpmyadmin:
     depends_on:

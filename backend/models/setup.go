@@ -8,10 +8,10 @@ import (
 // DB definition is
 var DB *gorm.DB
 
-// ConnectDataBase definition is
-func ConnectDataBase() {
+// ConnectDatabase definition is
+func ConnectDatabase() {
 
-	dsn := "root:r00t@tcp(127.0.0.1:3307)/fullstack?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "root:r00t@tcp(127.0.0.1:3307)/fullstack"
 	database, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
 	if err != nil {

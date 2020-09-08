@@ -4,6 +4,8 @@ package models
 type Plan struct {
 	ID          uint   `json:"-" gorm:"primary_key"`
 	Description string `json:"description"`
-	Months      int    `json:"month"`
-	PlanID      uint   `json:"-"`
+	Months      int    `json:"months"`
+	PriceRenew  string `json:"priceRenew"`
+	PriceOrder  string `json:"priceOrder"`
+	ProductID   uint   `json:"-"`
 }

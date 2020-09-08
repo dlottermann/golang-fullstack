@@ -19,7 +19,7 @@ func main() {
 			products := []models.Product{}
 			//models.DB.Find(&products)
 
-			models.DB.Preload("Items.Plans").Find(&products)
+			models.DB.Preload("Plans").Find(&products)
 
 			c.JSON(http.StatusOK, gin.H{
 				"products": products,

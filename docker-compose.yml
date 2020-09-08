@@ -1,4 +1,4 @@
-version: "3.5"
+version: '3.5'
 services:
   db:
     image: mysql:5.7
@@ -6,12 +6,9 @@ services:
     restart: always
     ports:
       - 3307:3306
-    volumes:
-      - ./database/database.sql:/docker-entrypoint-initdb.d/database.sql
     environment:
       MYSQL_ROOT_PASSWORD: r00t
-      MYSQL_DATABASE: fullstack
-      MYSQL_HOST: 127.0.0.1
+      MYSQL_HOST: 0.0.0.0
   phpmyadmin:
     depends_on:
       - db
@@ -22,3 +19,16 @@ services:
       - 8080:80
     environment:
       PMA_HOST: db
+  front:
+    depends_on:
+      - db
+    #fix from https://github.com/Software-For-Love/template-react-app-docker/commit/a6a5606dcbe16a46ddf6c20e8e71e38d9ec4dbd0  
+    stdin_open: true
+    build:
+      context: ./frontend
+    container_name: frontend
+    volumes:
+      - ./frontend:/app
+      - ./frontend/node_modules/:/app/node_modules
+    ports:
+      - 3003:3000

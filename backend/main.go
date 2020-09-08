@@ -17,7 +17,9 @@ func main() {
 		v1.GET("/", func(c *gin.Context) {
 
 			products := []models.Product{}
-			models.DB.Find(&products)
+			//models.DB.Find(&products)
+
+			models.DB.Preload("Items.Plans").Find(&products)
 
 			c.JSON(http.StatusOK, gin.H{
 				"products": products,

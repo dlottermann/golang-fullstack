@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 
-	"./models"
+	"github.com/dlottermann/golang-fullstack/models"
 	"github.com/gin-gonic/gin"
 )
 

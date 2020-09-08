@@ -11,7 +11,7 @@ var DB *gorm.DB
 // ConnectDatabase definition is
 func ConnectDatabase() {
 
-	dsn := "root:r00t@tcp(127.0.0.1:3307)/?parseTime=True"
+	dsn := "root:r00t@tcp(database:3307)/?parseTime=True"
 	database, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
 	if err != nil {

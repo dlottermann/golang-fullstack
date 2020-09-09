@@ -1,7 +1,66 @@
 body {
   margin: 0;
-  background-color: #F0F2F5;
+  background-color: #F1F6FB;
+  font-family: 'Montserrat', sans-serif;  
 }
 
 
 
+.logo {
+  height: 35px;
+  width: 198px;
+  margin-top: 1.2%;
+}
+
+.logo {
+  height: 15.77px;
+  width: 15.77px;
+  vertical-align: middle;
+}
+
+
+
+.header_navigation {
+  background-color: #FFFFFF;
+  height: 52px;
+}
+
+
+.banner_navigation {
+  background-color: #1D5297;
+  height:469px;
+  color: #FFFFFF;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif; 
+  display: flex;
+  align-items: center;
+}
+
+.banner_navigation h1.title {
+  letter-spacing: 0px;
+  font-size: 30px;
+  font-weight: bold;
+  max-width: 721px;
+  margin: 0 auto;
+
+  text-align: center;
+  font: normal normal bold 30px/45px Montserrat;
+  color: #FFFFFF;
+  opacity: 1;
+
+}
+
+.banner_navigation .sub_title {
+  color: #B9D0EF;
+  letter-spacing: 1.6px;
+  font-size: 16px;
+  font-weight: 600;
+  padding-top: 116px;
+}
+
+.banner_navigation p {
+  color: #B9D0EF;
+  text-align: left;
+font: normal normal normal 16px/22px Montserrat;
+letter-spacing: 0px;
+}

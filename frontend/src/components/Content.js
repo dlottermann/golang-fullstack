@@ -10,12 +10,15 @@ export const Content = () => {
   const [loading, setLoading] = useState(true);
   const [items, setItems] = useState({});
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     await getPlans().then((data) => setItems(data));
-  //   };
-  //   fetchData();
-  // }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      await getPlans().then((data) => {
+        setItems(data)
+        setLoading(false)
+      });
+    };
+    fetchData();
+  }, []);
 
 
 

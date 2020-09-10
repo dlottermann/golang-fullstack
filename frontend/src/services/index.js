@@ -9,13 +9,3 @@ await axios
   .catch(function (error) {
     console.log(error);
   });
-
-
-// useEffect(() => {
-//     fetch(API_URL)
-//       .then(response => response.json())
-//       .then(jsonResponse => {
-//         setMovies(jsonResponse.Search);
-//         setLoading(false);
-//       });
-//   }, []);

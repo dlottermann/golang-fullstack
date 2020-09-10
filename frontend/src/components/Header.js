@@ -6,7 +6,7 @@ export const Header = () => {
   return (
     <Container>
       <div className="header_navigation">
-        <img className="logo" src={hostgator} alt="Hostgator" />
+        <img width={16} height={16} className="logo" src={hostgator} alt="Hostgator" />
       </div>
     </Container>
   );

@@ -1,13 +1,16 @@
 import React  from "react";
-import {Header, Banner} from './components'
+import {Header, Banner, Content} from './components'
 import './index.css';
 
 const App = () => {
     return (
     <>
-    <Header/>
-    <Banner/>
-     <h1>Hello World!</h1>
+   
+      <Header/>
+      <Banner/>
+      <div className="container_all">
+        <Content/>
+      </div>
     </>
   );
 };

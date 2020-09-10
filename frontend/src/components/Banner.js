@@ -1,7 +1,6 @@
-import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Media from 'react-bootstrap/Media';
-import check from '../static/assets/image/icon-check.svg';
+import React from "react";
+import Container from "react-bootstrap/Container";
+import check from "../static/assets/image/icon-check.svg";
 
 export const Banner = () => {
   return (
@@ -12,18 +11,24 @@ export const Banner = () => {
           Tenha uma hospedagem de sites estável e evite perder visitantes
           diariamente
         </h1>
-        <Media>
-          <img className="check" src={check} alt="check" />
-          <p>99,9% de disponibilidade: seu site sempre no ar</p>
-        </Media>
-        <Media>
-          <img className="check" src={check} alt="check" />
-          <p>Hospedagem de Sites Suporte 24h, todos os dias</p>
-        </Media>
-        <Media>
-          <img className="check" src={check} alt="check" />
-          <p>Painel de Controle cPanel</p>
-        </Media>
+        <div className="items_banner">
+          <span className="item_banner">
+          <p><img className="check" src={check} alt="check" />
+            99,9% de disponibilidade: seu site sempre no ar</p>
+          </span>
+          <span className="item_banner">
+          <p>
+            <span>
+            <img className="check" src={check} alt="check" />
+             Suporte 24h, todos os dias
+            </span>
+            <span>
+            <img className="check" src={check} alt="check" />
+            Painel de Controle cPanel
+            </span>
+            </p>
+          </span>
+        </div>
       </Container>
     </div>
   );

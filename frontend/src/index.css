@@ -1,10 +1,15 @@
 body {
   margin: 0;
-  background-color: #F1F6FB;
-  font-family: 'Montserrat', sans-serif;  
 }
 
+html {
+  background-color: #f1f6fb;
+  font-family: "Montserrat", sans-serif;
+}
 
+.container_all{
+  background-color: #f1f6fb;
+}
 
 .logo {
   height: 35px;
@@ -12,26 +17,17 @@ body {
   margin-top: 1.2%;
 }
 
-.logo {
-  height: 15.77px;
-  width: 15.77px;
-  vertical-align: middle;
-}
-
-
-
 .header_navigation {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   height: 52px;
 }
 
-
 .banner_navigation {
-  background-color: #1D5297;
-  height:469px;
-  color: #FFFFFF;
+  background-color: #1d5297;
+  height: 469px;
+  color: #ffffff;
   text-align: center;
-  font-family: 'Montserrat', sans-serif; 
+  font-family: "Montserrat", sans-serif;
   display: flex;
   align-items: center;
 }
@@ -45,13 +41,12 @@ body {
 
   text-align: center;
   font: normal normal bold 30px/45px Montserrat;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 1;
-
 }
 
 .banner_navigation .sub_title {
-  color: #B9D0EF;
+  color: #b9d0ef;
   letter-spacing: 1.6px;
   font-size: 16px;
   font-weight: 600;
@@ -59,8 +54,92 @@ body {
 }
 
 .banner_navigation p {
-  color: #B9D0EF;
-  text-align: left;
-font: normal normal normal 16px/22px Montserrat;
-letter-spacing: 0px;
+  color: #b9d0ef;
+  font: normal normal normal 16px/22px Montserrat;
+  letter-spacing: 0px;
+}
+
+.items_banner {
+  font-family: "Montserrat", sans-serif;
+  max-width: 721px;
+  margin:34px auto;
+}
+
+.item_banner span:last-child{
+  margin-left: 17px;
+}
+
+.check {
+  height: 15.77px;
+  width: 15.77px;
+  position: relative;
+  top: 0px;
+  right: 5px;
+}
+
+.content_container {
+  border: 1px solid #b9d0ef;
+  min-height: 600px;
+  margin-bottom: 55px;
+  height: auto;
+  font-family: "Montserrat", sans-serif;
+}
+
+.card_body {
+  width: 331px;
+  height: 668px;
+  margin: 75px auto;
+  background-color: #ffffff;
+  border-top-width: 14px;
+  border-top-color: #FF6A17;
+  border-top-style: solid;
+  border-bottom-width: 7px;
+  border-bottom-color: #FF6A17;
+  border-bottom-style: solid;
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_content {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan {
+  width: 39px;
+  height: 42px;
+}
+
+.card_item {
+  border-bottom-color: #DFECFF;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.card_item h2 {
+  color: #1D5297;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.btn_buy{
+  border-radius: 26px;
+  color: #ffffff;
+  background-color: #FF6A17;
+  padding:10px 16px 10px 16px;
+  border:none;
+  font-weight: 600;
+  font-size: 22px;
+  width: 279px;
+  outline:none;
+}
+.btn_buy:focus {
+  outline:none;
+}
+
+.card_item ul {
+  list-style: none;
 }

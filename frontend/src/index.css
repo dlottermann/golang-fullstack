@@ -1,13 +1,10 @@
 body {
   margin: 0;
+  background-color: #f1f6fb !important;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
-html {
-  background-color: #f1f6fb;
-  font-family: "Montserrat", sans-serif;
-}
-
-.container_all{
+.container_all {
   background-color: #f1f6fb;
 }
 
@@ -20,6 +17,8 @@ html {
 .header_navigation {
   background-color: #ffffff;
   height: 52px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .banner_navigation {
@@ -27,7 +26,7 @@ html {
   height: 469px;
   color: #ffffff;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   align-items: center;
 }
@@ -60,12 +59,12 @@ html {
 }
 
 .items_banner {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   max-width: 721px;
-  margin:34px auto;
+  margin: 34px auto;
 }
 
-.item_banner span:last-child{
+.item_banner span:last-child {
   margin-left: 17px;
 }
 
@@ -78,29 +77,62 @@ html {
 }
 
 .content_container {
-  border: 1px solid #b9d0ef;
   min-height: 600px;
   margin-bottom: 55px;
   height: auto;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.payment_choose {
+  color: #1d5297;
+  font-size: 14px;
+  text-align: center;
+  padding-top: 36px;
+}
+
+.box_choose {
+  color: #16437e;
+  font-size: 16px;
+  font-weight: 400;
+  width: 322px;
+  margin: 7px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 2px 4px #4480c570;
+  border: 1px solid #4480c5;
+  border-radius: 21px;
+}
+
+.box_item {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.box_item_checked {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background: #4480c5 0% 0% no-repeat padding-box;
+  border-radius: 21px;
+  color: #ffffff;
+  font-weight: bold;
 }
 
 .card_body {
-  width: 331px;
-  height: 668px;
+  width: 351px;
+  min-height: 669px;
+  height: auto;
   margin: 75px auto;
   background-color: #ffffff;
   border-top-width: 14px;
-  border-top-color: #FF6A17;
+  border-top-color: #ff6a17;
   border-top-style: solid;
   border-bottom-width: 7px;
-  border-bottom-color: #FF6A17;
+  border-bottom-color: #ff6a17;
   border-bottom-style: solid;
   border-radius: 4px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .card_content {
@@ -111,35 +143,126 @@ html {
 .plan {
   width: 39px;
   height: 42px;
+  padding-bottom: 8px;
 }
 
 .card_item {
-  border-bottom-color: #DFECFF;
+  border-bottom-color: #dfecff;
   border-bottom-style: solid;
   border-bottom-width: 1px;
+
+  width: 351px;
+  min-height: 133px;
+  height: auto;
+}
+
+.card_item:last-child {
+  border: none;
 }
 
 .card_item h2 {
-  color: #1D5297;
+  color: #1d5297;
   font-size: 26px;
+  font-weight: 600;
+}
+
+.card_item_content {
+  margin: 10px auto;
+  padding: 47px;
+  display: block;
+  text-align: center;
+  padding-bottom: 27px;
+}
+
+.item_domain {
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 36px;
+}
+
+.info {
+  width: 15px;
+  height: 15px;
+}
+
+.item_discount {
+  font-size: 14px;
+  color: #1d5297;
+  font-weight: 400;
+}
+
+.item_phrase_discount {
+  vertical-align: middle;
+}
+
+.item_badge {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: #51c99c 0% 0% no-repeat padding-box;
+  border-radius: 224px;
+  padding: 4px;
+  position: relative;
+  left: 4px;
+}
+
+.item_values {
+  font-size: 13px;
+  color: #333333;
+}
+
+.item_value_old {
+  text-decoration: line-through;
+}
+
+.item_value_new {
   font-weight: bold;
 }
 
-.btn_buy{
+.item_value_monthly {
+  color: #1d5297;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.item_monthly {
+  color: #1d5297;
+  font-size: 20px;
+}
+
+.card_item_list {
+  text-align: left;
+  padding-top: 30px;
+  padding-bottom: 27px;
+  font-size: 16px;
+  color: #333333;
+}
+
+.btn_buy {
   border-radius: 26px;
   color: #ffffff;
-  background-color: #FF6A17;
-  padding:10px 16px 10px 16px;
-  border:none;
+  background-color: #ff6a17;
+  padding: 10px 16px 10px 16px;
+  border: none;
   font-weight: 600;
   font-size: 22px;
   width: 279px;
-  outline:none;
+  outline: none;
 }
 .btn_buy:focus {
-  outline:none;
+  outline: none;
 }
 
 .card_item ul {
   list-style: none;
+}
+
+.card_item ul li {
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+li.list_underline strong {
+  text-decoration: underline;
 }

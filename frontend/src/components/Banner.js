@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
+import Container from '@material-ui/core/Container';
 import check from "../static/assets/image/icon-check.svg";
 
 export const Banner = () => {

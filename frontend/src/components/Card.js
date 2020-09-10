@@ -2,6 +2,7 @@ import React from 'react';
 import plan from '../static/assets/image/plan.svg';
 import info from '../static/assets/image/info.svg';
 
+
 const Card = () => {
   return (
     <>

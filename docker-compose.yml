@@ -28,18 +28,18 @@ services:
     ports:
       - 9090:9090
     restart: on-failure:5
-  phpmyadmin:
-    depends_on:
-      - db
-    image: phpmyadmin/phpmyadmin
-    container_name: phpmyadmin
-    restart: always
-    ports:
-      - 8080:80
-    environment:
-      PMA_HOST: db
-    networks:
-      - mysql
+  # phpmyadmin:
+  #   depends_on:
+  #     - db
+  #   image: phpmyadmin/phpmyadmin
+  #   container_name: phpmyadmin
+  #   restart: always
+  #   ports:
+  #     - 8080:80
+  #   environment:
+  #     PMA_HOST: db
+  #   networks:
+  #     - mysql
   front:
     depends_on:
       - server
@@ -51,6 +51,6 @@ services:
     volumes:
       - ./frontend:/app
     ports:
-      - 3003:3000
+      - 3000:3000
     networks:
       - mysql

@@ -44,5 +44,6 @@ func main() {
 
 		})
 	}
+
 	router.Run(":9090")
 }

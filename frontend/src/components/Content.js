@@ -1,30 +1,45 @@
-import React, { useState, useEffect } from 'react';
-import Container from '@material-ui/core/Container';
+import React, { useState, useEffect } from "react";
+import Container from "@material-ui/core/Container";
+import Radio from "@material-ui/core/Radio";
+import RadioGroup from "@material-ui/core/RadioGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 
-import Card from './Card';
-import ReactLoading from 'react-loading';
+import Card from "./Card";
+import ReactLoading from "react-loading";
 
-import { getPlans } from "../services";
+import { getPlan } from "../services";
 
 export const Content = () => {
   const [loading, setLoading] = useState(true);
-  const [items, setItems] = useState({});
+  const [item, setItem] = useState({});
+  //initialize Plan M
+  const [selected, setSelected] = useState({
+    description: "triennially",
+    months: 36,
+    priceRenew: "764.22",
+    priceOrder: "764.22"
+  });
 
   useEffect(() => {
     const fetchData = async () => {
-      await getPlans().then((data) => {
-        setItems(data)
-        setLoading(false)
+      // Plano M  = ID 6
+      await getPlan(6).then((data) => {
+        setItem(data);
+        setLoading(false);
       });
     };
     fetchData();
   }, []);
 
 
+  const handleItem = value => {
+    const it = item.product[0].cycle.filter(i => i.months === value)
+    setSelected(it[0])
+  }
+
 
   return (
     <>
-    {console.log(items)}
       {loading ? (
         <ReactLoading
           type="spin"
@@ -35,46 +50,37 @@ export const Content = () => {
       ) : (
         <Container>
           <p className="payment_choose">Quero pagar a cada:</p>
-           {/*<Form>
+          <span>
             <div className="box_choose">
-              <Form.Check
-                custom
-                inline
-                label="3 anos"
-                type="radio"
-                name="choice"
-                id={`choice-1`}
-                className="box_item"
-                value="36"
-                onChange={(e) => {}}
-              />
-              <Form.Check
-                custom
-                inline
-                label="1 ano"
-                type="radio"
-                name="choice"
-                id={`choice-2`}
-                className="box_item"
-                value="12"
-                onChange={(e) => {}}
-              />
-              <Form.Check
-                custom
-                inline
-                label="1 mês"
-                type="radio"
-                name="choice"
-                id={`choice-3`}
-                className="box_item"
-                value="1"
-                onChange={(e) => {}}
-              />
+              <RadioGroup row aria-label="position" name="position" defaultValue="top">
+                <FormControlLabel
+                  checked = {selected.months === 36}
+                  value="36"
+                  control={<Radio color="primary" />}
+                  label="3 anos"
+                  onChange={ () => handleItem(36) }
+                />
+                <FormControlLabel
+                 checked = {selected.months === 12}
+                  value="12"
+                  control={<Radio color="primary" />}
+                  label="1 ano"
+                  onChange={ () => handleItem(12) }
+                />
+                <FormControlLabel
+                  checked = {selected.months === 1}
+                  value="1"
+                  control={<Radio color="primary" />}
+                  label="1 mês"
+                  onChange={ () => handleItem(1) }
+                />
+              </RadioGroup>
             </div>
-          </Form> */}
+
+          </span>
 
           <div className="content_container">
-            <Card />
+            <Card item={selected} />
           </div>
         </Container>
       )}

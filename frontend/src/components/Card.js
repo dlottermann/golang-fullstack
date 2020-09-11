@@ -3,7 +3,13 @@ import plan from '../static/assets/image/plan.svg';
 import info from '../static/assets/image/info.svg';
 
 
-const Card = () => {
+const formatter = val => new Intl.NumberFormat([], { style: 'currency', currency: 'BRL' }).format(val)
+
+
+const Card = ({item}) => {
+
+  const discount = item.priceOrder - ( (item.priceOrder*40)/100 )
+  const totalDiscount = (item.priceOrder*40)/100
   return (
     <>
       <div className="card_body">
@@ -19,14 +25,14 @@ const Card = () => {
             <div className="card_item_content">
             <p className="item_values" >
               
-              <span className="item_value_old">R$ 647,64</span>
+              <span className="item_value_old">R$ {formatter(item.priceOrder)}</span>
               {' '}
-              <span className="item_value_new">R$ 453,35</span> 
+              <span className="item_value_new">R$ {formatter(item.priceOrder*40/100)}</span> 
              
               <div className="item_text">equivalente a </div>
 
                <div className="item_monthly"> 
-                 R$ <span className="item_value_monthly">12,59</span>/mês*
+               R$ <span className="item_value_monthly">{formatter(totalDiscount/item.months)}</span>/mês*
                </div>  
               </p>
               
@@ -41,7 +47,7 @@ const Card = () => {
               </p>
               <p>
                 <div className="item_discount">
-                  <span className="item_phrase_discount" >economize R$ 174,48</span>
+                  <span className="item_phrase_discount" >economize R$ {formatter(discount)}</span>
                 <span className="item_badge">40% OFF</span>
                 </div>
                 
